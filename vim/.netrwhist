@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/home/guillaume/Documents/Informatique/my_android/Bloc_searcH/src/com/example/bloc_search'
+let g:netrw_dirhist_2='/home/guillaume/Documents/Informatique/Programmation/perl/Windoz'
+let g:netrw_dirhist_3='/home/guillaume/Documents/Informatique/Programmation/perl'
+let g:netrw_dirhist_4='/home/guillaume/Documents/Informatique/Programmation/perl/duhs'
+let g:netrw_dirhist_5='/home/guillaume/Documents/Informatique/Programmation/perl/Windoz'
