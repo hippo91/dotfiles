@@ -7,6 +7,7 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """ COLORS
 call pathogen#infect() "An easy to use plugin manager 
+call pathogen#helptags() "An easy to use plugin manager 
 
 "colorscheme solarized " Sweet colors
 colorscheme pyte " Sweet colors
@@ -22,28 +23,12 @@ syntax enable " Enable syntax highlighting
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """ LEADER SHORTCUTS
-let mapleader=";" "; becomes the leader key
-
 "Save session
 nnoremap <leader>s :mksession<CR>
 
 "Open ag.vim
 nnoremap <leader>a :Ag
 
-"Next tab
-nnoremap <leader>a gt
-
-"Previous tab
-nnoremap <leader>z gT
-
-"List buffers
-nnoremap <F6> :buffers<CR>
-
-"Previous buffer
-nnoremap <F7> :bp<CR>:buffers<CR>
-
-"Next buffer
-nnoremap <F8> :bn<CR>:buffers<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """ SPACE & TABS
 set tabstop=2 "Number of viusal spaces per tab
@@ -157,10 +142,10 @@ set omnifunc=syntaxcomplete#Complete
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """ SPECIAL OPS
 "An easy to use undo graph explorer"
-nnoremap <F5> :GundoToggle<CR> 
+nnoremap <F4> :GundoToggle<CR> 
 
 "An easy to use file explorer
-nnoremap <F4> :NERDTree<CR> 
+nnoremap <F5> :NERDTreeToggle<CR> 
 
 "To search specfic files
 nnoremap <F3> :CtrlP<CR> 
@@ -189,7 +174,7 @@ map <leader>cd :cd %:p:h<cr>:pwd<cr>
 set laststatus=2
 set statusline=Path:\ %F\ \|\ Ligne:\ %l\ \|\ Colonne:\ %c\ \|\ Byte:\ %b-->0x%B
 " Dedicated airline add on
-let g:airline_powerline_fonts=1
+" let g:airline_powerline_fonts=1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme = 'badwolf'
 """"""""""""""""""""""""""""""
@@ -202,4 +187,9 @@ set pdev=cp
 """"""""""""""""""""""""""""""
 :command! -complete=file -nargs=1 Rpdf :r !pdftotext -nopgbrk <q-args> - |fmt -csw78
 
+
+""""""""""""""""""""""""""""""
+" => vim-jedi config
+""""""""""""""""""""""""""""""
+let g:jedi#use_tabs_not_buffers = 1
 
